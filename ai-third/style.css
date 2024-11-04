@@ -1,0 +1,96 @@
+
+.result-box {
+    margin-top: 90px !important;
+    display: flex;
+    background: #ffffff0a;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding-top: 35px;
+    padding-bottom: 23px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 40px;
+}
+.result-navbar {
+    text-align: center;
+    margin-top: 20px;
+    top: 10px;
+    position: absolute;
+}
+.result-navbar img {
+    width: 62%;
+}
+.result-box-top {
+    width: 100%;
+}
+.result-box-top .title {
+    font-size: 40px !important;
+    margin: 10px 0 35px 0 !important;
+    display: block !important;
+    padding-left: 25px !important;
+}
+.result-box-body {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn-ai-ico {
+    width: 23px !important;
+    margin-left: 5px;
+}
+.result-box button {
+    padding: 0 25px !important;
+    padding-right: 18px !important;
+    position: relative;
+    bottom: 0;
+}
+.empty-list-result {
+    margin-bottom: 50px !important;
+    margin-top: 50px !important;;
+}
+
+.full-list-result {
+    margin-bottom: 0 !important;
+    margin-top: -32px !important;
+}
+.ai-img {
+    width: 9vw !important;
+    padding: 2vw;
+}
+.activity {
+    display: flex;
+    flex-direction: column;
+    width: 72vw;
+    margin: 3px;
+    text-align: left;
+    background: #ffffff0d;
+    padding: 20px 20px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.ai-box-sez {
+    display: grid;
+}
+.ai-title {
+    font-family: 'CabinetGrotesk-Black';
+    font-size: 18px;
+    color: #fff;
+}
+.ai-desc {
+    font-family: 'CabinetGrotesk-Regular';
+    font-size: 14px;
+    color: #ffffffad;
+    line-height: 13px;
+    margin-top: 7px;
+}
+
+#generateButton img {
+    width: 20px;
+}

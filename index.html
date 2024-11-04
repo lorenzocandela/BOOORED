@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+
+<html lang="it">
+    <head>
+        <meta name="theme-color" content="#04070b">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="stylesheet" href="./font/css/cabinet-grotesk.css?v=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BORED</title>
+        <link rel="stylesheet" href="style.css?v=1.2">
+        <link rel="stylesheet" href="./font/css/cabinet-grotesk.css">
+        <link rel="manifest" href="manifest.json?v=1.2">
+    </head>
+
+    <body>
+
+
+        <div class="BACINELLA-TOP">
+            <div class="head">
+                <img src="./img/grande-vuoto.png" class="logo-header">
+                <span class="header">Welcome<br>to Booored!</span>
+                <span class="sub-header sub-header-onb">Stay curious, beat the boredom.</span>
+            </div>
+            <img src="./img/bg-onb.png" class="bg-onb">
+            <div class="link">
+                <button id="googleBtn" class="linkBtn"><img class="icon-link" src="./img/ico/google.png"><span>Continue with Google</span></button>
+                <button id="appleBtn"class="linkBtn"><img class="icon-link" src="./img/ico/apple.png"><span>Sign in with Apple</span></button>
+                <button id="mainBtn" class="linkBtn"><span>Continue with Username</span></button>
+            </div>
+            <div class="download-div">
+                <a class="href-download" href="#" id="installButton">Download  the App (android) v3.2</a>
+            </div>
+        </div>
+    
+        <script>
+        let deferredPrompt;
+        const installButton = document.querySelector('#installButton');
+        installButton.style.display = 'block';
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            });
+
+            installButton.addEventListener('click', () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('Utente ha accettato di installare la PWA');
+                } else {
+                    console.log('Utente ha rifiutato di installare la PWA');
+                }
+                deferredPrompt = null;
+                });
+            } else {
+                alert('Installazione non disponibile al momento.');
+            }
+        });
+
+        </script>
+          
+        <script src="main-result.js"></script>
+    </body>
+</html>
